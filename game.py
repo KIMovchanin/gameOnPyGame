@@ -27,9 +27,9 @@ def play():
     # добавляем название для приложения
     pygame.display.set_caption("PyGame Injinerium")
     # подгружаю картинку в проект
-    icon = pygame.image.load('Materials/Images/inj.jpg').convert()
+    ICON = pygame.image.load('Materials/Images/inj.jpg').convert()
     # устанавливаю картинку в качестве иконки
-    pygame.display.set_icon(icon)
+    pygame.display.set_icon(ICON)
     bg = pygame.image.load('Materials/Images/back.jpg').convert()
 
     zombie = az.ZOMBIE_WALK_L[0]
@@ -57,13 +57,13 @@ def play():
     lose_label = label.render('You lose!', False, 'DarkRed')
 
     restart_label = label.render('Play again', False, 'White', 'DarkGreen')
-    restart_label_rect = restart_label.get_rect(topleft=(WIDTH*0.41, HEIGHT*0.58))
+    restart_label_rect = restart_label.get_rect(topleft=(WIDTH*0.42, HEIGHT*0.58))
 
     menu_label = label.render('Go to menu', False, 'White', 'DarkGreen')
     menu_label_rect = menu_label.get_rect(topleft=(WIDTH*0.4125, HEIGHT*0.83))
 
     top_label = label.render('Top 5 players', False, 'White', 'DarkGreen')
-    top_label_rect = top_label.get_rect(topleft=(WIDTH*0.6, HEIGHT*0.6))
+    top_label_rect = top_label.get_rect(topleft=(WIDTH*0.66, HEIGHT*0.66))
 
     ammo_max = 7
     ammo = ammo_max

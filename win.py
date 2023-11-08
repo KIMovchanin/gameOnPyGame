@@ -15,13 +15,13 @@ def win():
     win_label_rect = win_label.get_rect(topleft=(WIDTH*0.416, HEIGHT*0.16))
 
     play_again_label = label.render('Play again?', False, 'Red', 'DarkGreen')
-    play_again_label_rect = play_again_label.get_rect(topleft=(WIDTH*0.375, HEIGHT*0.5))
+    play_again_label_rect = play_again_label.get_rect(topleft=(WIDTH*0.38, HEIGHT*0.5))
 
     menu_label = label.render('Go to menu', False, 'White', 'DarkGreen')
-    menu_label_rect = menu_label.get_rect(topleft=(WIDTH*0.3, HEIGHT*0.83))
+    menu_label_rect = menu_label.get_rect(topleft=(WIDTH*0.33, HEIGHT*0.83))
 
     top_label = label.render('Top 5 players', False, 'White', 'DarkGreen')
-    top_label_rect = top_label.get_rect(topleft=(WIDTH*0.6, HEIGHT*0.6))
+    top_label_rect = top_label.get_rect(topleft=(WIDTH*0.66, HEIGHT*0.66))
 
     quit_label = label.render('Quit', False, 'White', 'DarkGreen')
     quit_label_rect = quit_label.get_rect(topleft=(WIDTH*0.5416, HEIGHT*0.83))
