@@ -1,11 +1,12 @@
 import pygame
 import menu
+from screensettings import WIDTH, HEIGHT
 
 
 def howtoplay():
     pygame.init()
 
-    screen = pygame.display.set_mode((1067, 600))
+    screen = pygame.display.set_mode((WIDTH*0.88916, HEIGHT))
 
     label = pygame.font.Font('Materials/Fonts/Quicksand-VariableFont_wght.ttf', 20)
 
@@ -21,19 +22,19 @@ def howtoplay():
     shoot_label = label.render('For shooting use key "f".', False, 'White')
 
     back_button = label.render('<- Back to menu.', False, 'Red')
-    back_button_rect = back_button.get_rect(topleft=(30, 550))
+    back_button_rect = back_button.get_rect(topleft=(WIDTH*0.025, HEIGHT*0.916))
 
     running = True
     while running:
         pygame.display.update()
 
-        screen.blit(text_label1, (200, 200))
-        screen.blit(text_label2, (440, 225))
-        screen.blit(text_label3, (415, 250))
+        screen.blit(text_label1, (WIDTH*0.16, HEIGHT*0.33))
+        screen.blit(text_label2, (WIDTH*0.36, HEIGHT*0.375))
+        screen.blit(text_label3, (WIDTH*0.34583, HEIGHT*0.416))
 
-        screen.blit(move_label, (390, 400))
-        screen.blit(jump_label, (450, 425))
-        screen.blit(shoot_label, (430, 450))
+        screen.blit(move_label, (WIDTH*0.325, HEIGHT*0.66))
+        screen.blit(jump_label, (WIDTH*0.375, HEIGHT*0.7083))
+        screen.blit(shoot_label, (WIDTH*0.3583, HEIGHT*0.75))
         screen.blit(back_button, back_button_rect)
 
         mouse = pygame.mouse.get_pos()

@@ -1,11 +1,12 @@
 import pygame
+from screensettings import WIDTH, HEIGHT
 
 pygame.init()
-pygame.display.set_mode((1200, 600))
+pygame.display.set_mode((WIDTH, HEIGHT))
 
-bullet_r = [
+BULLET_R = [
     pygame.image.load('Materials/Images/Bullets/bullet_r.png').convert_alpha()
 ]
-bullet_l = [
+BULLET_L = [
     pygame.image.load('Materials/Images/Bullets/bullet_l.png').convert_alpha()
 ]

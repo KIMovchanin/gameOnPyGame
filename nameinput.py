@@ -1,12 +1,13 @@
 import pygame
 import game
+from screensettings import WIDTH, HEIGHT
 
 name = []
 
 
 def entername():
     pygame.init()
-    screen = pygame.display.set_mode((1067, 600))
+    screen = pygame.display.set_mode((WIDTH*0.88916, HEIGHT))
     bg = pygame.image.load('Materials/Images/back_menu.jpg')
 
     clock = pygame.time.Clock()
@@ -15,7 +16,7 @@ def entername():
     user_input = 'John Doe'
     please_write = label.render('Please click on the square and write your nickname: ', False, 'Black')
     start_button = label.render('Start', False, 'White', 'DarkGreen')
-    start_button_rect = start_button.get_rect(topleft=(900, 500))
+    start_button_rect = start_button.get_rect(topleft=(WIDTH*0.75, HEIGHT*0.8))
 
     input_rect = pygame.Rect(500, 200, 140, 32)
     color_active = pygame.Color('lightskyblue3')
@@ -28,7 +29,7 @@ def entername():
 
         screen.blit(bg, (0, 0))
         # screen.fill((0, 0, 0))
-        screen.blit(please_write, (200, 100))
+        screen.blit(please_write, (WIDTH*0.16, HEIGHT*0.16))
         text_surface = label.render(user_input, False, 'DarkGreen')
         screen.blit(text_surface, (input_rect.x + 3, input_rect.y + 3))
         screen.blit(start_button, start_button_rect)

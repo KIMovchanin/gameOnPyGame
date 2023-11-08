@@ -2,28 +2,29 @@ import pygame
 import game
 import menu
 import topfive
+from screensettings import WIDTH, HEIGHT
 
 
 def win():
     pygame.init()
     pygame.mixer.init()
-    screen = pygame.display.set_mode((1200, 600))
+    screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
     label = pygame.font.Font('Materials/Fonts/Quicksand-VariableFont_wght.ttf', 40)
     win_label = label.render('You win!', False, 'LightGreen')
-    win_label_rect = win_label.get_rect(topleft=(500, 100))
+    win_label_rect = win_label.get_rect(topleft=(WIDTH*0.416, HEIGHT*0.16))
 
     play_again_label = label.render('Play again?', False, 'Red', 'DarkGreen')
-    play_again_label_rect = play_again_label.get_rect(topleft=(450, 300))
+    play_again_label_rect = play_again_label.get_rect(topleft=(WIDTH*0.375, HEIGHT*0.5))
 
     menu_label = label.render('Go to menu', False, 'White', 'DarkGreen')
-    menu_label_rect = menu_label.get_rect(topleft=(400, 500))
+    menu_label_rect = menu_label.get_rect(topleft=(WIDTH*0.3, HEIGHT*0.83))
 
     top_label = label.render('Top 5 players', False, 'White', 'DarkGreen')
-    top_label_rect = top_label.get_rect(topleft=(800, 400))
+    top_label_rect = top_label.get_rect(topleft=(WIDTH*0.6, HEIGHT*0.6))
 
     quit_label = label.render('Quit', False, 'White', 'DarkGreen')
-    quit_label_rect = quit_label.get_rect(topleft=(650, 500))
+    quit_label_rect = quit_label.get_rect(topleft=(WIDTH*0.5416, HEIGHT*0.83))
 
     running = True
     while running:

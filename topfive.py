@@ -1,10 +1,11 @@
 import pygame
 from bdconnect import top
+from screensettings import WIDTH, HEIGHT
 
 
 def topfive():
     pygame.init()
-    screen = pygame.display.set_mode((1200, 600))
+    screen = pygame.display.set_mode((WIDTH, HEIGHT))
     label = pygame.font.Font('Materials/Fonts/Quicksand-VariableFont_wght.ttf', 30)
     try:
         top1 = label.render(f'1. {top[0][0]} - {top[0][1]}', False, 'White')
@@ -34,23 +35,23 @@ def topfive():
         pygame.display.update()
 
         try:
-            screen.blit(top1, (200, 50))
+            screen.blit(top1, (WIDTH*0.1, HEIGHT*0.08))
         except:
             pass
         try:
-            screen.blit(top2, (200, 150))
+            screen.blit(top2, (WIDTH*0.1, HEIGHT*0.25))
         except:
             pass
         try:
-            screen.blit(top3, (200, 250))
+            screen.blit(top3, (WIDTH*0.1, HEIGHT*0.41))
         except:
             pass
         try:
-            screen.blit(top4, (200, 350))
+            screen.blit(top4, (WIDTH*0.1, HEIGHT*0.58))
         except:
             pass
         try:
-            screen.blit(top5, (200, 450))
+            screen.blit(top5, (WIDTH*0.1, HEIGHT*0.75))
         except:
             pass
         mouse = pygame.mouse.get_pos()
